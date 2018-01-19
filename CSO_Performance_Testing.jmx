@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.3" jmeter="2.8 r1393162">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CSO_Performance_Testing" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">2000</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time"></stringProp>
+        <longProp name="ThreadGroup.start_time">1380002621000</longProp>
+        <longProp name="ThreadGroup.end_time">1380002621000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SC11" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">HDR-MDSREQ  001SC11    04471   20131214140039309001KPOSKC                                                                                                    9999999999992014-01-1505:00:39   00000DKMART30F           KL00000000000000002013-12-142014-01-2622:00:0021:59:5901YYNNNNNNNN</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">iscoqa.intra.searshc.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">isco/HttpListener</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SC04 Inquiry" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">HDR-MDSREQ  001SC04    2932    20131220122320474409ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718560278000000000000000000000000000000000000000000000000000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">iscoqa.intra.searshc.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">isco/HttpListener</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SC04 Redemption" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">HDR-MDSREQ  001    SC04   0930020130830015153693693ECPN00R10108454294592014-01-0900:00:00                SL999700021484502732           0A9700021484503517           0A9700021484503616           0A9700021482634398           0A9700021482639669           0A9700021485212098           0A9700021485219240           0A9700021485220246           0A9700021485223872           0A9700021484558371           0A9700021484559699           0A9700021484564204           0A9700021485225302           0A9700021485400297           0A9700021485505633           0A9700021485515311           0A9700021485521183           0A9700021485522562           0A9700021485528700           0A9700021484571240           0A9700021484574197           0A9700021484577570           0A9700021485581750           0A9700021485590547           0A9700021484732207           0A9700021485538358           0A9700021485548388           0A9700021485549217           0A9700021485554686           0A9700021485557137           0A9700000205508741           0A9700000205509090           0A9700000205645446           0A9817857180749084           0A9817857184373285           0A9817857182058368           0A9817857186479992           0A9817857145893685           0A9817857149360237           0A9817857141677982           0A9817857141216402           0A9817857143333602           0A9817857144179179           0A9817857142603744           0A9817857140457349           0A9817857146347361           0A9817857149748653           0A9817857158642003           0A9817857151643670           0A9817857156629877           0A9817857154194728           0A9817857152355374           0A9817857158626089           0A9817857152799604           0A9817857155785086           0A9817857150592832           0A9817857151532875           0A9817857198028706           0A9803162937921352           0A</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">iscoqa.intra.searshc.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">isco/HttpListener</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SC28_Bulk Inquiry" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">HDR-MDSREQ  001SC28    2932    20131220122320474409ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718560278000000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718951357000000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718413316200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718655883300000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718615895800000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718181486600000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718074908400000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718437328500000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718205836800000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785718647999200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714589368500000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714936023700000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714167798200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714121640200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714333360200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714417917900000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714260374400000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714045734900000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714634736100000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785714974865300000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715864200300000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715164367000000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715662987700000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715419472800000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715235537400000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715862608900000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715279960400000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715578508600000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715059283200000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785715153287500000000000000000000000000000000000000000000000000;;ECPN01I0324400456282014-01-0700:00:007081155864967319UI0000000000000000000000000000000000000000000000000000000000981785719802870600000000000000000000000000000000000000000000000000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">iscoqa.intra.searshc.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">isco/HttpListener</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
